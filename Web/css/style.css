@@ -1,4 +1,27 @@
 body
 {
   background-color : white;
+  display: flex;
+}
+
+.cokpit
+{
+  height: 950px;
+  position: relative;
+  left: 420px;
+}
+
+.volant
+{
+  position: absolute;
+  top: 470px;
+  left: 600px;
+}
+
+.levier
+{
+  position: absolute;
+  width: 72px;
+  left: 866px;
+  bottom: 664px;
 }
