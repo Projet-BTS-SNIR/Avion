@@ -1,0 +1,98 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+ul
+{
+  display: inline-flex;
+  list-style-type: none;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+body
+{
+  background-color : white;
+  user-select: none;
+}
+
+header
+{
+  background-color: rgb(204, 20, 20);
+  height: 70px;
+}
+
+.titre
+{
+  color: white;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+.cokpit
+{
+  height: 950px;
+  position: relative;
+  left: 420px;
+  user-select: none;
+}
+
+.volant
+{
+  position: absolute;
+  top: 470px;
+  left: 600px;
+  user-select: none;
+}
+
+.levieroffdown
+{
+  position: absolute;
+  width: 72px;
+  left: 866px;
+  bottom: 664px;
+  user-select: none;
+}
+
+.levierondown
+{
+  position: absolute;
+  width: 72px;
+  left: 866px;
+  bottom: 660px;
+  user-select: none;
+}
+
+.levieroffup
+{
+  position: absolute;
+  width: 72px;
+  left: 866px;
+  bottom: 664px;
+  top : 215px;
+  user-select: none;
+}
+
+.levieronup
+{
+  position: absolute;
+  width: 72px;
+  left: 866px;
+  bottom: 660px;
+  top : 215px;
+  user-select: none;
+}
+
+.rectangle
+{
+  position: absolute;
+  background-color: grey;
+  left: 898px;
+  bottom: 664px;
+  height: 30px;
+  width: 10px;
+  opacity: 0.10;
+  user-select: none;
+}
