@@ -1,27 +1,27 @@
-const levier = document.getElementById('levier');
+const carre = document.getElementById('carre');
+let isMouseDown = false;
+let rotation = 0;
+let rotationSpeed = 0.005; // Ajustez cette valeur pour changer la vitesse de rotation
 
-let isPressed = false;
-
-levier.addEventListener('mousedown', () => {
-  isPressed = true;
-  levier.style.height = '100px'; // Changer la hauteur selon vos besoins
+carre.addEventListener('mousedown', () => {
+  isMouseDown = true;
 });
 
 document.addEventListener('mouseup', () => {
-  if (isPressed) {
-    isPressed = false;
-    levier.style.height = '200px'; // Rétablir la hauteur initiale
-  }
+  isMouseDown = false;
 });
 
-document.addEventListener('mousemove', (event) => {
-  if (isPressed) {
-    const mouseY = event.clientY;
-    const levierRect = levier.getBoundingClientRect();
+function updateRotation(event) {
+  if (isMouseDown) {
+    const angle = Math.atan2(event.clientY - carre.offsetTop - carre.clientHeight / 2, event.clientX - carre.offsetLeft - carre.clientWidth / 2);
+    const targetRotation = angle * (180 / Math.PI);
     
-    // Assurez-vous que la souris reste dans les limites du levier
-    if (mouseY < levierRect.bottom) {
-      levier.style.height = `${levierRect.bottom - mouseY}px`;
-    }
+    // Interpoler la rotation pour une transition plus douce
+    rotation += (targetRotation - rotation) * rotationSpeed;
   }
-});
+
+  carre.style.transform = `rotate(${rotation}deg)`;
+  requestAnimationFrame(() => updateRotation(event));
+}
+
+document.addEventListener('mousemove', updateRotation);
