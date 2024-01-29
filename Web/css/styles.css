@@ -4,12 +4,45 @@
   padding: 0px;
 }
 
-ul
+.barreduhaut
 {
   display: inline-flex;
   list-style-type: none;
   margin-top: 8px;
   margin-left: 10px;
+}
+
+.affichage1
+{
+  position: absolute;
+  left: 150px;
+  top: 450px;
+  height: 450px;
+}
+
+.rudderpedal
+{
+  position: absolute;
+  height: 220px;
+  left: 900px;
+  top: 440px;
+  user-select: none;
+}
+
+ul
+{
+  display: inline-flex;
+  list-style-type: none;
+  margin-top: 4px;
+  margin-bottom: 19px;
+  margin-left: 8px;
+}
+
+.Text
+{
+  font-size: 20px;
+  margin-top: 7px;
+  margin-left: 64px;
 }
 
 body
@@ -33,26 +66,41 @@ header
 
 .cokpit
 {
-  height: 950px;
+  height: 350px;
   position: relative;
-  left: 420px;
   user-select: none;
+  left: 750px;
+  top: 10px;
+}
+
+.lightmenu
+{
+  background-color: rgb(233, 56, 56);
+  color: white;
+  position: absolute;
+  left: 50px;
+  top: 120px;
+  width: 500px;
+  height: 270px;
+  border: 3px solid rgb(150, 0, 0);
 }
 
 .volant
 {
   position: absolute;
-  top: 470px;
-  left: 600px;
+  left: 870px;
+  height: 200px;
+  top: 700px;
   user-select: none;
+  cursor: grab;
 }
 
 .levieroffdown
 {
   position: absolute;
   width: 72px;
-  left: 866px;
-  bottom: 664px;
+  left: 1208px;
+  bottom: 580px;
   user-select: none;
 }
 
@@ -60,8 +108,8 @@ header
 {
   position: absolute;
   width: 72px;
-  left: 866px;
-  bottom: 660px;
+  left: 1208px;
+  bottom: 578px;
   user-select: none;
 }
 
@@ -69,30 +117,61 @@ header
 {
   position: absolute;
   width: 72px;
-  left: 866px;
-  bottom: 664px;
-  top : 215px;
+  left: 1208px;
+  bottom: 580px;
   user-select: none;
+  top: 306px;
 }
 
 .levieronup
 {
   position: absolute;
-  width: 72px;
-  left: 866px;
-  bottom: 660px;
-  top : 215px;
+  width: 80px;
+  left: 1206px;
+  bottom: 580px;
   user-select: none;
+  top: 306px;
 }
 
 .rectangle
 {
   position: absolute;
   background-color: grey;
-  left: 898px;
-  bottom: 664px;
+  left: 1240px;
+  bottom: 580px;
   height: 30px;
   width: 10px;
   opacity: 0.10;
   user-select: none;
+  cursor: grab;
+}
+
+.button
+{
+  height: 50px;
+  width:50px;
+  background-color: rgb(30, 30, 30);
+  position: absolute;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ON
+{
+  border: 1px solid gray;
+  color: gray;
+  width:40px;
+  font-size: 12px;
+  text-align: center;
+  margin:5px;
+}
+
+.OFF
+{
+  border: 1px solid white;
+  color: white;
+  width:40px;
+  font-size: 12px;
+  text-align: center;
+  margin-left:4px
 }
