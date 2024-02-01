@@ -1,0 +1,47 @@
+{
+  "Light": 
+  [
+    {
+      "Led Wing Right": false,
+    },
+    {
+      "Led Wing Left": false,
+    },
+    {
+      "Led Taxi": false,
+    },
+	{
+      "Led Double Flash": false,
+    },
+	{
+      "Led AFT Strobe": false,
+    }
+  ],
+  "Wings": 
+  [
+	{
+		"Right": 
+		{
+			"Aileron":0,
+		},
+	},
+	{
+		"Left": 
+		{
+			"Aileron":0,
+		},
+	}
+  ],
+  "Taxi":
+  [
+	{
+		"Direction": 0,
+	},
+	{
+		"Enable": false,
+	}
+  ],
+  "Pales": 0,
+  "Rudder": 0,
+  "Elevator": 0,
+}
