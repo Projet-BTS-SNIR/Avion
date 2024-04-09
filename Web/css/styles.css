@@ -1,0 +1,328 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+.barreduhaut
+{
+  display: inline-flex;
+  list-style-type: none;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.affichage1
+{
+  position: absolute;
+  left: 150px;
+  top: 450px;
+  height: 450px;
+}
+
+.rudderpedal
+{
+  position: absolute;
+  height: 220px;
+  left: 900px;
+  top: 440px;
+  user-select: none;
+}
+
+ul
+{
+  display: inline-flex;
+  list-style-type: none;
+  margin-top: 4px;
+  margin-bottom: 19px;
+  margin-left: 8px;
+}
+
+.Text
+{
+  font-size: 20px;
+  margin-top: 7px;
+  margin-left: 64px;
+}
+
+body
+{
+  background-color : white;
+  user-select: none;
+}
+
+header
+{
+  background-color: rgb(204, 20, 20);
+  height: 70px;
+}
+
+.titre
+{
+  color: white;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+.cokpit
+{
+  height: 350px;
+  position: absolute;
+  user-select: none;
+  left: 750px;
+  top: 90px;
+  z-index: -9999;
+}
+
+.lightmenu
+{
+  background-color: rgb(233, 56, 56);
+  color: white;
+  position: absolute;
+  left: 50px;
+  top: 120px;
+  width: 500px;
+  height: 270px;
+  border: 3px solid rgb(150, 0, 0);
+}
+
+.volant
+{
+  position: absolute;
+  left: 870px;
+  height: 200px;
+  top: 700px;
+  user-select: none;
+  cursor: grab;
+}
+
+.levieroffdown
+{
+  position: absolute;
+  width: 72px;
+  left: 1208px;
+  bottom: 570px;
+  user-select: none;
+  top: 306px;
+}
+
+.levierondown
+{
+  position: absolute;
+  width: 72px;
+  left: 1208px;
+  bottom: 570px;
+  user-select: none;
+  top: 306px;
+}
+
+.levieroffup
+{
+  position: absolute;
+  width: 72px;
+  left: 1208px;
+  bottom: 570px;
+  user-select: none;
+  top: 306px;
+}
+
+.levieronup
+{
+  position: absolute;
+  width: 80px;
+  left: 1206px;
+  bottom: 570px;
+  user-select: none;
+  top: 306px;
+}
+
+.rectangle
+{
+  position: absolute;
+  background-color: grey;
+  left: 1240px;
+  bottom: 570px;
+  height: 30px;
+  width: 10px;
+  top: 362px;
+  opacity: 0.1;
+  user-select: none;
+  cursor: grab;
+}
+
+.button
+{
+  height: 50px;
+  width:50px;
+  background-color: rgb(30, 30, 30);
+  position: absolute;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ON
+{
+  border: 1px solid gray;
+  color: gray;
+  width:40px;
+  font-size: 12px;
+  text-align: center;
+  margin:5px;
+}
+
+.OFF
+{
+  border: 1px solid white;
+  color: white;
+  width:40px;
+  font-size: 12px;
+  text-align: center;
+  margin-left:4px
+}
+
+.menuconnection
+{
+  background-color: rgb(204, 20, 20);
+  color: white;
+  float: right;
+  width: 250px;
+  height: 520px;
+  z-index: 10;
+}
+
+.textmdp
+{
+  text-align: center;
+  margin-left: 12px;
+  font-size: large;
+}
+
+.motdepasse
+{
+  text-align: center;
+  margin-left: 35px;
+  margin-top: 10px;
+}
+
+.validation
+{
+  height: 20px;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 70px;
+}
+
+.terminal
+{
+  border: 2px solid black;
+  margin-top: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  height: 175px;
+}
+
+.vueavion
+{
+  border: 2px solid black;
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-top: 8px;
+  height: 690px;
+}
+
+.pagemtl
+{
+  position:absolute;
+  margin-left: 10px;
+  top: 90px;
+  height: 20px;
+  width: 100px;
+  right: 130px;
+}
+
+.pagebts
+{
+  position:absolute;
+  margin-left: 10px;
+  top: 90px;
+  height: 20px;
+  width: 100px;
+  right: 20px;
+}
+
+.textssid
+{
+  position:absolute;
+  top: 124px;
+  bottom: 820px;
+  margin-left: 20px;
+}
+
+.ssid
+{
+  position:absolute;
+  top: 143px;
+  bottom: 800px;
+  margin-left: 20px;
+  height: 15px;
+}
+
+.textmdpres
+{
+  position:absolute;
+  top: 174px;
+  bottom: 770px;
+  margin-left: 20px;
+}
+
+.motdepassereseau
+{
+  position:absolute;
+  top: 193px;
+  bottom: 750px;
+  margin-left: 20px;
+  height: 15px;
+}
+
+.connexionesp
+{
+  position:absolute;
+  top: 222px;
+  bottom: 720px;
+  margin-left: 20px;
+  height: 20px;
+  width: 200px;
+}
+
+.deconnecter
+{
+  position:absolute;
+  top: 252px;
+  bottom: 690px;
+  margin-left: 20px;
+  height: 20px;
+  width: 200px;
+}
+
+.rudderpedalgauche
+{
+  position:absolute;
+  left: 908px;
+  top: 492px;
+  right: 979px;
+  bottom: 368px;
+  width: 41px;
+  height: 104px;
+}
+
+.rudderpedaldroite
+{
+  position:absolute;
+  left: 1057px;
+  top: 492px;
+  right: 979px;
+  bottom: 368px;
+  width: 41px;
+  height: 104px;
+  cursor: grab;
+}
