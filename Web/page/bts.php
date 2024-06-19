@@ -10,6 +10,9 @@
     setcookie("RotationVolant", 0);
     setcookie("TaxiEnable", 0);
     setcookie("RudderPosition", 0);
+    setcookie("RotationVolantDroit", 0);
+    setcookie("RotationVolantGauche", 0);
+    setcookie("PositionFlaps", 0);
     setcookie("PositionVolant", 0);
 ?>
 
@@ -43,33 +46,33 @@
         <div class="lightmenu">
             <ul>
                 <li>
-                    <div class="button strobelightgauche" id="strobelightgauche"> 
-                        <p class="ON" id="ONstrobelightgauche">
+                    <div class="button strobelight" id="strobelight"> 
+                        <p class="ON" id="ONstrobelight">
                             ON
                         </p>
-                        <p class="OFF" id="OFFstrobelightgauche">
+                        <p class="OFF" id="OFFstrobelight">
                             OFF
                         </p>
                     </div>
                 </li>
                 <li>
-                    <p class="Text">Strobe Light Gauche</p>
+                    <p class="Text">Strobe Light</p>
                 </li>
             </ul>
             <br>
             <ul>
                 <li>
-                    <div class="button strobelightdroite" id="strobelightdroite">
-                        <p class="ON" id="ONstrobelightdroite">
+                    <div class="button navelight" id="navelight">
+                        <p class="ON" id="ONNaveLight">
                             ON
                         </p>
-                        <p class="OFF" id="OFFstrobelightdroite">
+                        <p class="OFF" id="OFFNaveLight">
                             OFF
                         </p>
                     </div>
                 </li>
                 <li>
-                    <p class="Text">Strobe Light Droite</p>
+                    <p class="Text">Nav Light</p>
                 </li>
             </ul>
             <br>
@@ -130,6 +133,8 @@
         <img class="levierondown" id="levierondown" src="../pic/levier_on_down.png" href = "levierondown" ondragstart="return false">
         <img class="levieroffup" id="levieroffup" src="../pic/levier_off_up.png" href = "levieroffup" ondragstart="return false">
         <img class="levieronup" id="levieronup" src="../pic/levier_on_up.png" href = "levieronup" ondragstart="return false">
+        <img class="fondbouttonflap" id="fondbouttonflap" src="../pic/fond_bouton_flap.png" href = "fondbouttonflap" ondragstart="return false">
+        <img class="bouttonflap" id="bouttonflap" src="../pic/bouton_flap.png" href = "bouttonflap" ondragstart="return false">
         <div class="rectangle" id="rectangle"></div>
         <div class="menuconnection" id="menuconnection">
             <label class="textmdp" id="textmdp"> 

@@ -89,10 +89,9 @@ header
 .volant
 {
   position: absolute;
-  left: 870px;
+  left: 865px;
   height: 200px;
   top: 700px;
-  user-select: none;
   cursor: grab;
 }
 
@@ -325,4 +324,24 @@ header
   width: 41px;
   height: 104px;
   cursor: grab;
+}
+
+.fondbouttonflap
+{
+  position:absolute;
+  width: 200px;
+  right: 350px;
+  top: 480px;
+  left: 1370px;
+  bottom: 60.547px;
+}
+
+.bouttonflap
+{
+  position:absolute;
+  cursor: grab;
+  top: 620px;
+  right: 403px;
+  left: 1424px;
+  bottom: 199px;
 }

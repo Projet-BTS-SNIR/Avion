@@ -7,7 +7,7 @@
         </title>
         <link href="css/style.css" rel="stylesheet"/>
         <link href="css/styles.css" rel="stylesheet"/>
-        <meta meta name="viewport" content="width=device-width, user-scalable=no" charset="utf-8"/>
+        <meta meta name="viewport" content="width=device-width" charset="utf-8"/>
     </head>
     <body>
         <header>

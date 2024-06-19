@@ -1,7 +1,6 @@
 //Déclaration
 
-let strobelightgauchestatus = false;
-let strobelightdroitestatus = false;
+let navelightstatus = false;
 let aftstrobelightstatus = false;
 let taxilightstatus = false;
 let doubleflashlightstatus = false;
@@ -14,6 +13,7 @@ let doubleflashlightstatus = false;
   const rectangle = document.getElementById("rectangle");
   const pedalgauche = document.getElementById("rudderpedalgauche");
   const pedaldroite = document.getElementById("rudderpedaldroite");
+  const bouttonflap = document.getElementById("bouttonflap");
 
   levierondown.hidden = true;
   levieroffup.hidden = true;
@@ -22,10 +22,17 @@ let doubleflashlightstatus = false;
   let isDragging = false;
   let isDraggingg = false;
   let isDragginggg = false;
+  let isDraggingggg = false;
   let enlev = false;
   let keypressT = false;
 
-  var valueutile = 0;
+  bouttonflap.addEventListener('mousedown', (e) => {
+    isDraggingggg = true;
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDraggingggg = false;
+  });
 
   volant.addEventListener('mousedown', (e) => {
     isDragging = true;
@@ -111,6 +118,20 @@ let doubleflashlightstatus = false;
           if(volant.style.top != 659 + 'px')
           {
             volant.style.top = (mouseY - 80) + 'px';
+            const positionactuelvolant = volant.offsetTop - 659;
+            const calculpourcentage = ((positionactuelvolant)/(741 - 659)) * 100;
+            if (calculpourcentage > 100)
+              {
+                document.cookie = "PositionVolant = " + 100;
+              }
+            else if (calculpourcentage < 0)
+              {
+                document.cookie = "PositionVolant = " + 0;
+              }
+            else
+            {
+              document.cookie = "PositionVolant = " + calculpourcentage;
+            }
           }
         }
         if(volant.style.top > 740 + 'px')
@@ -127,7 +148,16 @@ let doubleflashlightstatus = false;
         if(rotation < 30 && rotation > -30 )
         {
             volant.style.transform = `rotate(${rotation}deg)`;
-            document.cookie = "RotationVolant = " + rotation;
+            if(rotation < 0)
+            {
+              document.cookie = "RotationVolantDroit = " + (180 - (-rotation * 6));
+              document.cookie = "RotationVolantGauche = " + (-rotation * 6);
+            }
+            else
+            {
+              document.cookie = "RotationVolantDroit = " + (rotation * 6);
+              document.cookie = "RotationVolantGauche = " + (180 - (rotation * 6));
+            }
         }
       }
     }
@@ -159,6 +189,20 @@ let doubleflashlightstatus = false;
           if(pedaldroite.style.top != 454 + 'px')
           {
             pedaldroite.style.top = (mouseY - 80) + 'px';
+            const positionactuelpedaldroite = pedaldroite.offsetTop - 454;
+            const calculpourcentagee = ((positionactuelpedaldroite)/(536 - 454)) * 100;
+            if (calculpourcentagee > 100)
+              {
+                document.cookie = "RudderPosition = " + 100;
+              }
+            else if (calculpourcentagee < 0)
+              {
+                document.cookie = "RudderPosition = " + 0;
+              }
+            else
+            {
+              document.cookie = "RudderPosition = " + calculpourcentagee;
+            }
           }
         }
         if(pedaldroite.style.top > 535 + 'px')
@@ -169,86 +213,88 @@ let doubleflashlightstatus = false;
         {
           pedaldroite.style.top = 453 + 'px';
         }
-        if(pedaldroite.style.top < 536 + 'px')
-        {
-          if(pedaldroite.style.top > 492 + 'px')
-          {
-            valueutile = -70;
-          }
-        }
-        if(pedaldroite.style.top < 453 + 'px')
-        {
-          if(pedaldroite.style.top < 492 + 'px')
-          {
-            valueutile = 70;
-          }
-        }
-        //gauche
-        if(pedalgauche.style.top < 536 + 'px')
-        {
-          if(pedalgauche.style.top != 454 + 'px')
-          {
-            pedalgauche.style.top = ((mouseY - 80) + 70) + 'px';
-          }
-        }
-        if(pedalgauche.style.top > 535 + 'px')
-        {
-          pedalgauche.style.top = 535 + 'px';
-        }
-        if(pedalgauche.style.top < 455 + 'px')
-        {
-          pedalgauche.style.top = 453 + 'px';
-        }
     }
+    if(isDraggingggg == true)
+      {
+        if(bouttonflap.style.top < 762 + 'px')
+          {
+            if(bouttonflap.style.top != 618 + 'px')
+            {
+              bouttonflap.style.top = (mouseY - 80) + 'px';
+              if(bouttonflap.style.top > 617 + 'px' && bouttonflap.style.top < 666 + 'px') 
+                {
+                  document.cookie = "PositionFlaps = " + 0;
+                }
+              else if(bouttonflap.style.top > 667 + 'px' && bouttonflap.style.top < 730 + 'px') 
+                {
+                  document.cookie = "PositionFlaps = " + 90;
+                }
+              else if(bouttonflap.style.top > 731 + 'px' && bouttonflap.style.top < 760 + 'px') 
+                {
+                  document.cookie = "PositionFlaps = " + 180;
+                }
+             }
+          }
+          if(bouttonflap.style.top > 761 + 'px')
+            {
+              bouttonflap.style.top = 760 + 'px';
+            }
+            if(bouttonflap.style.top < 619 + 'px')
+            {
+              bouttonflap.style.top = 617 + 'px';
+            }
+      }
   });
 
-  const strobelightgauche = document.getElementById("strobelightgauche");
-  const ONstrobelightgauche = document.getElementById("ONstrobelightgauche");
-  const OFFstrobelightgauche = document.getElementById("OFFstrobelightgauche");
+  const strobelight = document.getElementById("strobelight");
+  const ONstrobelight = document.getElementById("ONstrobelight");
+  const OFFstrobelight = document.getElementById("OFFstrobelight");
 
-  strobelightgauche.addEventListener("click", (event) => {
-    if(strobelightgauchestatus == true)
+  let strobelightstatus = false;
+
+  strobelight.addEventListener("click", (event) => {
+    if(strobelightstatus == true)
     {
-      ONstrobelightgauche.style.color = "#808080";
-      ONstrobelightgauche.style.borderColor = "#808080";
-      OFFstrobelightgauche.style.color = "#FFFFFF";
-      OFFstrobelightgauche.style.borderColor = "#FFFFFF";
-      strobelightgauchestatus = false;
-      document.cookie = "LeftStrobeLight = " + 0;
+      ONstrobelight.style.color = "#808080";
+      ONstrobelight.style.borderColor = "#808080";
+      OFFstrobelight.style.color = "#FFFFFF";
+      OFFstrobelight.style.borderColor = "#FFFFFF";
+      strobelightstatus = false;
+      document.cookie = "StrobeLight = " + 0;
     }
     else
     {
-      OFFstrobelightgauche.style.color = "#808080";
-      OFFstrobelightgauche.style.borderColor = "#808080";
-      ONstrobelightgauche.style.color = "#FF6800";
-      ONstrobelightgauche.style.borderColor = "#FF6800";
-      strobelightgauchestatus = true;
-      document.cookie = "LeftStrobeLight = " + 1;
+      OFFstrobelight.style.color = "#808080";
+      OFFstrobelight.style.borderColor = "#808080";
+      ONstrobelight.style.color = "#FF6800";
+      ONstrobelight.style.borderColor = "#FF6800";
+      strobelightstatus = true;
+      document.cookie = "StrobeLight = " + 1;
     }
   });
 
-  const strobelightdroite = document.getElementById("strobelightdroite");
-  const ONstrobelightdroite = document.getElementById("ONstrobelightdroite");
-  const OFFstrobelightdroite = document.getElementById("OFFstrobelightdroite");
+  const navelight = document.getElementById("navelight");
+  const ONNaveLight = document.getElementById("ONNaveLight");
+  const OFFNaveLight = document.getElementById("OFFNaveLight");
 
-  strobelightdroite.addEventListener("click", (event) => {
-    if(strobelightdroitestatus == true)
+  navelight.addEventListener("click", (event) => {
+    if(navelightstatus == true)
     {
-      ONstrobelightdroite.style.color = "#808080";
-      ONstrobelightdroite.style.borderColor = "#808080";
-      OFFstrobelightdroite.style.color = "#FFFFFF";
-      OFFstrobelightdroite.style.borderColor = "#FFFFFF";
-      strobelightdroitestatus = false;
-      document.cookie = "RightStrobeLight = " + 0;
+      ONNaveLight.style.color = "#808080";
+      ONNaveLight.style.borderColor = "#808080";
+      OFFNaveLight.style.color = "#FFFFFF";
+      OFFNaveLight.style.borderColor = "#FFFFFF";
+      navelightstatus = false;
+      document.cookie = "NaveLight = " + 0;
     }
     else
     {
-      OFFstrobelightdroite.style.color = "#808080";
-      OFFstrobelightdroite.style.borderColor = "#808080";
-      ONstrobelightdroite.style.color = "#FF6800";
-      ONstrobelightdroite.style.borderColor = "#FF6800";
-      strobelightdroitestatus = true;
-      document.cookie = "RightStrobeLight = " + 1;
+      OFFNaveLight.style.color = "#808080";
+      OFFNaveLight.style.borderColor = "#808080";
+      ONNaveLight.style.color = "#FF6800";
+      ONNaveLight.style.borderColor = "#FF6800";
+      navelightstatus = true;
+      document.cookie = "NaveLight = " + 1;
     }
   });
 
@@ -369,7 +415,7 @@ let doubleflashlightstatus = false;
   deconnecter.hidden = true;
 
   validation.addEventListener("click", (event) => {
-    if(motdepasse.value == "Avion")
+    if(motdepasse.value == "SITE@vi0n")
     {
       validation.hidden = true;
       textmdp.hidden = true;
